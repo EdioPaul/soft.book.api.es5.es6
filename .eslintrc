@@ -1,0 +1,28 @@
+{
+    "overrides": [
+        {
+        "files": [
+            "**/*.spec.js"
+        ],
+        "env": {
+            "jest": true
+        }
+        }
+    ],
+    "rules": {
+        "no-console": 1
+    },
+    "env": {
+        "node": true,
+        "mocha": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 8,
+        "ecmaFeatures": {
+          "experimentalObjectRestSpread": true
+        }
+    },
+    "extends": [
+        "standard"
+    ]
+}

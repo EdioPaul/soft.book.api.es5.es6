@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  mongo:
+    image: mongo
+    container_name: 'softbook-db'
+    restart: always
+    environment:
+      - MONGO_INITDB_DATABASE=softbook-db
+      - MONGO_INITDB_ROOT_USERNAME=
+      - MONGO_INITDB_ROOT_PASSWORD=
+    volumes:
+      - mongo_data:/data/db
+    ports:
+      - "27017:27017"
+      
+volumes:
+  mongo_data:
+    external: false

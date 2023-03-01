@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "6ed6b5ae-1122-4654-95d5-6590323436a8",
+		"name": "SoftBook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"teste@teste.com\",\n    \"password\": \"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3001/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Nzc1MDUyNDQsImV4cCI6MTY3NzUwODg0NH0.L4oaVX3eUQf3UyzEcCTpQX1yuyKnfgX_V0XgAPzujl4"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Test Book\",\n    \"author\": \"Test Author\",\n    \"summary\": \"summaryteste\",\n    \"ISBN\": \"ABC123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3001/api/book"
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Nzc1MDUyNDQsImV4cCI6MTY3NzUwODg0NH0.L4oaVX3eUQf3UyzEcCTpQX1yuyKnfgX_V0XgAPzujl4"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Update Test Book\",\n    \"author\": \"Test Author\",\n    \"summary\": \"Teste summary\",\n    \"ISBN\": \"ABC123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3001/api/book/63fcb30e8d821019b581ff48"
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Nzc1MDUyNDQsImV4cCI6MTY3NzUwODg0NH0.L4oaVX3eUQf3UyzEcCTpQX1yuyKnfgX_V0XgAPzujl4"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/api/search?=",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"search"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Nzc1MDUyNDQsImV4cCI6MTY3NzUwODg0NH0.L4oaVX3eUQf3UyzEcCTpQX1yuyKnfgX_V0XgAPzujl4"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3001/api/detail/63fcb30e8d821019b581ff48"
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Nzc1MDUyNDQsImV4cCI6MTY3NzUwODg0NH0.L4oaVX3eUQf3UyzEcCTpQX1yuyKnfgX_V0XgAPzujl4"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3001/api/book/63fcb30e8d821019b581ff48"
+			},
+			"response": []
+		},
+		{
+			"name": "rent",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Nzc1MDg5MjEsImV4cCI6MTY3NzUxMjUyMX0.sTIlLvhRto3At8O0R9UcAR55ouKCLLASZrkzegxPZ_I"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"is_rent\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3001/api/rent/63fcb41c8d821019b581ff56"
+			},
+			"response": []
+		},
+		{
+			"name": "devolution",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Nzc1MDg5MjEsImV4cCI6MTY3NzUxMjUyMX0.sTIlLvhRto3At8O0R9UcAR55ouKCLLASZrkzegxPZ_I"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"is_rent\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3001/api/devolution/63fcb41c8d821019b581ff56"
+			},
+			"response": []
+		}
+	]
+}
